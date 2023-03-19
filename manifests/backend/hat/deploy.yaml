@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: podtato-head-hat
+  labels:
+    app: podtato-head-hat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: podtato-head-hat
+  template:
+    metadata:
+      labels:
+        app: podtato-head-hat
+        role: backend
+    spec:
+      containers:
+      - name: container
+        image: ghcr.io/podtato-head/podtato-server:v0.3.1
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PODTATO_COMPONENT
+          value: "hat"

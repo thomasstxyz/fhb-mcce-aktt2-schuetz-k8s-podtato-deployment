@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: services-config
+data:
+  servicesConfig.yaml: |-
+    hat:       "http://podtato-head-hat:8080"
+    left-leg:  "http://podtato-head-left-leg:8080"
+    left-arm:  "http://podtato-head-left-arm:8080"
+    right-leg: "http://podtato-head-right-leg:8080"
+    right-arm: "http://podtato-head-right-arm:8080"

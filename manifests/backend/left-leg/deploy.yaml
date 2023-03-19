@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: podtato-head-left-leg
+  labels:
+    app: podtato-head-left-leg
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: podtato-head-left-leg
+  template:
+    metadata:
+      labels:
+        app: podtato-head-left-leg
+        role: backend
+    spec:
+      containers:
+      - name: container
+        image: ghcr.io/podtato-head/podtato-server:v0.3.1
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PODTATO_COMPONENT
+          value: "left-leg"
