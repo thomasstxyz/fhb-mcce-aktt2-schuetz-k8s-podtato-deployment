@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- cm.yaml
+- deploy.yaml
+- svc.yaml
+commonLabels:
+  app.kubernetes.io/name: podtato-head
+  app.kubernetes.io/instance: podtato-head-abcxzy
+  app.kubernetes.io/version: "0.3.1"
+  app.kubernetes.io/component: frontend
+  app.kubernetes.io/part-of: podtato-head
+  app.kubernetes.io/managed-by: kustomize
