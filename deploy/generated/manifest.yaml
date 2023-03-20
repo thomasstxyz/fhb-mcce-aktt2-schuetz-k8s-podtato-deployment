@@ -1,3 +1,4 @@
+# https://raw.githubusercontent.com/thomasstxyz/fhb-mcce-aktt2-schuetz-k8s-podtato-deployment/main/deploy/generated/manifest.yaml
 apiVersion: v1
 data:
   servicesConfig.yaml: |-
